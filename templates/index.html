@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Yoga Instructor</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Yoga Instructor</h1>
+        <div class="video-wrapper">
+            <div class="video-container">
+                <img src="{{ url_for('video_feed') }}" id="video-feed" alt="Video Feed">
+            </div>
+            <div class="status-indicator"></div>
+        </div>
+        <div class="feedback-container">
+            <h2>Feedback</h2>
+            <p id="feedback-text">Waiting for analysis...</p>
+            <div class="pose-tips">
+                <span>Tips: Keep your back straight and breathe deeply</span>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="btn btn-primary">Start Session</button>
+            <button id="stop-btn" class="btn btn-secondary">Stop Session</button>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
